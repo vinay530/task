@@ -17,11 +17,15 @@ export class AppComponent {
 
   addTrip() {
     if (this.start && this.end) {
-      this.trips.push({ start: this.start.toUpperCase(), end: this.end.toUpperCase() });
+      this.trips.push({ 
+        start: this.start.substring(0, 3).toUpperCase(), 
+        end: this.end.substring(0, 3).toUpperCase() 
+      });
       this.start = '';
       this.end = '';
     }
   }
+  
 
   isLevel2(index: number): boolean {
     if (index === 0) return false;

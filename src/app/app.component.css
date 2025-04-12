@@ -1,0 +1,85 @@
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.input-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.input-form input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.input-form button {
+  background: #6C5CE7;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-form button:hover {
+  background: #5A4CD0;
+}
+
+.trip-map {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.trip-segment {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.trip-segment.level2 {
+  margin-top: 30px;
+}
+
+.trip-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #444;
+  margin-right: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.line {
+  width: 80px;
+  height: 2px;
+  background: var(--line-color);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.line.arrow::after {
+  content: '➔';
+  position: absolute;
+  right: -18px;
+  top: -8px;
+  font-size: 14px;
+  color: #666;
+}

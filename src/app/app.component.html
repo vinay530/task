@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="input-form">
+    <input [(ngModel)]="start" placeholder="Start Point (e.g. BLR)" />
+    <input [(ngModel)]="end" placeholder="End Point (e.g. DEL)" />
+    <button (click)="addTrip()">+ Add Trip</button>
+  </div>
+
+  <div class="trip-map">
+    <div *ngFor="let trip of trips; let i = index"
+         class="trip-segment"
+         [class.level2]="isLevel2(i)"
+         [ngStyle]="{ '--line-color': getColor(i) }">
+      <div class="dot" [style.backgroundColor]="getColor(i)"></div>
+      <span class="trip-label">{{ trip.start }} - {{ trip.end }}</span>
+      <div class="line" [class.arrow]="!isConnected(i)"></div>
+    </div>
+  </div>
+</div>
